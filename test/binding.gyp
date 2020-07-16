@@ -1,6 +1,7 @@
 {
   'target_defaults': {
     'includes': ['../common.gypi'],
+    'include_dirs': ['.'],
     'sources': [
         'addon_data.cc',
         'arraybuffer.cc',
