@@ -1,6 +1,10 @@
 {
   'target_defaults': {
     'includes': ['../common.gypi'],
+    'include_dirs': [
+      './test/relative/path',
+      '/test/absolute/path'
+    ],
     'sources': [
         'addon_data.cc',
         'arraybuffer.cc',
@@ -60,13 +64,11 @@
   'targets': [
     {
       'target_name': 'binding',
-      'includes': ['../except.gypi'],
-      'include_dirs': ["<!@(node -p \"require('../').include\")"]
+      'includes': ['../except.gypi']
     },
     {
       'target_name': 'binding_noexcept',
-      'includes': ['../noexcept.gypi'],
-      'include_dirs': ["<!@(node -p \"require('../').include\")"]
+      'includes': ['../noexcept.gypi']
     },
   ],
 }
