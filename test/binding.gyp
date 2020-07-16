@@ -64,7 +64,11 @@
   'targets': [
     {
       'target_name': 'binding',
-      'includes': ['../except.gypi']
+      'includes': ['../except.gypi'],
+      'include_dirs': [
+        './test/relative/path2',
+        '/test/absolute/path2'
+      ]
     },
     {
       'target_name': 'binding_noexcept',
